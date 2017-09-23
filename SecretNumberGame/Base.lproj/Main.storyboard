@@ -65,6 +65,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9R-lG-Cfu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Guesses Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIq-XR-fli">
                                 <rect key="frame" x="57" y="318" width="261.5" height="30"/>
@@ -90,6 +93,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCo-US-YSW">
+                                <rect key="frame" x="16" y="595" width="343" height="52"/>
+                                <color key="backgroundColor" red="0.9852797136" green="1" blue="0.9993780981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Play Again!">
+                                    <color key="titleShadowColor" red="0.9852797136" green="1" blue="0.9993780981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="button.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2J-SH-Sfd"/>
+                                    <action selector="PlayAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A79-bo-zGI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93921930631058981" green="0.93676016367592352" blue="0.97971526015228427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -98,6 +118,8 @@
                             <constraint firstItem="1RV-uA-v0E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3C7-jm-xlE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6fw-Pp-fyN" secondAttribute="trailing" constant="111" id="6MR-3c-fL1"/>
                             <constraint firstItem="JIq-XR-fli" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="Cbl-vE-06O"/>
+                            <constraint firstItem="jCo-US-YSW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="IBr-Vp-j3t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jCo-US-YSW" secondAttribute="bottom" constant="20" id="IuG-6d-bz0"/>
                             <constraint firstItem="6fw-Pp-fyN" firstAttribute="top" secondItem="1RV-uA-v0E" secondAttribute="bottom" constant="89" id="K79-3c-OER"/>
                             <constraint firstAttribute="trailing" secondItem="JDN-gr-JfL" secondAttribute="trailing" constant="16" id="LtS-tf-TCU"/>
                             <constraint firstItem="Wfe-dX-zSs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="155" id="PJG-qR-WgV"/>
@@ -110,11 +132,20 @@
                             <constraint firstItem="1RV-uA-v0E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ecw-g2-mTq"/>
                             <constraint firstItem="JIq-XR-fli" firstAttribute="top" secondItem="6fw-Pp-fyN" secondAttribute="bottom" constant="65" id="i9q-VX-X9x"/>
                             <constraint firstAttribute="trailing" secondItem="1RV-uA-v0E" secondAttribute="trailing" id="mOc-dD-d9n"/>
+                            <constraint firstAttribute="trailing" secondItem="jCo-US-YSW" secondAttribute="trailing" constant="16" id="q1U-cN-ryf"/>
                             <constraint firstItem="3VB-gy-t6i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="51" id="ri3-fq-dnd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JDN-gr-JfL" secondAttribute="bottom" constant="20" id="sXh-zS-c3n"/>
                             <constraint firstItem="JDN-gr-JfL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="575" id="xII-Vn-Lgu"/>
+                            <constraint firstItem="jCo-US-YSW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="575" id="zSU-Dj-RKz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NumberText" destination="6fw-Pp-fyN" id="uAm-yx-aji"/>
+                        <outlet property="gameText" destination="3VB-gy-t6i" id="TL3-cb-EdF"/>
+                        <outlet property="numOfGuesses" destination="Wfe-dX-zSs" id="Q3c-3v-4j7"/>
+                        <outlet property="numberText" destination="6fw-Pp-fyN" id="3gR-9W-dvQ"/>
+                        <outlet property="playAgainButton" destination="jCo-US-YSW" id="xly-6n-Anu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
