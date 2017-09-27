@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             }
             
             //see if the number is the correct number
-            if num == randomNum{
+            else if num == randomNum{
                 gameText.text = "Congrats You Won"
                 gameText.isHidden = false
                 playAgainButton.isHidden = false
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             
             //check if the player has lost
             if(numOfGuesses.text == "0"){
-                gameText.text = "You Lose"
+                gameText.text = "You Lose Correct Number: " + randomNum.description
                 gameText.isHidden = false
                 playAgainButton.isHidden = false
             }
